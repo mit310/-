@@ -1,0 +1,29 @@
+﻿2016/11/06 14:11:56 にビルドを開始しました。
+     1>ノード 2 上のプロジェクト "E:\Billiards\Billiards\Billiards\Billiards.vcxproj" (build ターゲット)。
+     1>InitializeBuildStatus:
+         "AlwaysCreate" が指定されたため "Debug\Billiards.unsuccessfulbuild" を作成しています。
+       ClCompile:
+         F:\アプリ\VC\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt Process.cpp
+         Process.cpp
+       Link:
+         F:\アプリ\VC\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\Billiards\Billiards\Debug\Billiards.exe" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\Billiards.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"E:\Billiards\Billiards\Debug\Billiards.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\Billiards\Billiards\Debug\Billiards.lib" /MACHINE:X86 Debug\DirectX.obj
+         Debug\DX_Model.obj
+         Debug\Font.obj
+         Debug\Framerate.obj
+         Debug\Func.obj
+         Debug\Input.obj
+         Debug\Main.obj
+         Debug\Process.obj
+         Debug\Window.obj
+         LINK : 前回のインクリメンタル リンクで E:\Billiards\Billiards\Debug\Billiards.exe が見つからなかったか、ビルドされませんでした。フル リンクを行います。
+         Billiards.vcxproj -> E:\Billiards\Billiards\Debug\Billiards.exe
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"E:\Billiards\Billiards\Debug\Billiards.exe;#1" /manifest Debug\Billiards.exe.intermediate.manifest
+       FinalizeBuildStatus:
+         ファイル "Debug\Billiards.unsuccessfulbuild" を削除しています。
+         "Debug\Billiards.lastbuildstate" のタッチ タスクを実行しています。
+     1>プロジェクト "E:\Billiards\Billiards\Billiards\Billiards.vcxproj" (build ターゲット) のビルドが完了しました。
+
+ビルドに成功しました。
+
+経過時間 00:00:01.87
