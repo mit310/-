@@ -1,0 +1,27 @@
+﻿2016/10/10 16:03:54 にビルドを開始しました。
+     1>ノード 2 上のプロジェクト "E:\Billiards\Billiards\Billiards\Billiards.vcxproj" (build ターゲット)。
+     1>InitializeBuildStatus:
+         "AlwaysCreate" が指定されたため "Release\Billiards.unsuccessfulbuild" を作成しています。
+       ClCompile:
+         すべての出力が最新のものです。
+         F:\アプリ\VC\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D _MBCS /Gm- /EHsc /MT /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt DirectX.cpp Main.cpp Window.cpp
+         DirectX.cpp
+         Main.cpp
+         Window.cpp
+       Link:
+         F:\アプリ\VC\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\Billiards\Billiards\Release\Billiards.exe" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Release\Billiards.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"E:\Billiards\Billiards\Release\Billiards.pdb" /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\Billiards\Billiards\Release\Billiards.lib" /MACHINE:X86 Release\DirectX.obj
+         Release\Main.obj
+         Release\Window.obj
+         コード生成しています。
+         コード生成が終了しました。
+         Billiards.vcxproj -> E:\Billiards\Billiards\Release\Billiards.exe
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"E:\Billiards\Billiards\Release\Billiards.exe;#1" /manifest Release\Billiards.exe.intermediate.manifest
+       FinalizeBuildStatus:
+         ファイル "Release\Billiards.unsuccessfulbuild" を削除しています。
+         "Release\Billiards.lastbuildstate" のタッチ タスクを実行しています。
+     1>プロジェクト "E:\Billiards\Billiards\Billiards\Billiards.vcxproj" (build ターゲット) のビルドが完了しました。
+
+ビルドに成功しました。
+
+経過時間 00:00:02.63
