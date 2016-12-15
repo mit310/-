@@ -4,6 +4,8 @@
 #include <d3dx9.h>
 #include "Func.h"
 
+
+
 //モデルデータ構造体
 struct Model_Data {
 	//モデル本体の情報
@@ -15,6 +17,7 @@ struct Model_Data {
 	//モデルの状態
 	vec pos;
 	vec ang;	//角度(軸)
+	vec scale;
 };
 
 //モデル管理クラス

@@ -97,6 +97,7 @@ void Font::CreateChar(int _x, int _y, wchar_t data[], int _col){
 	int fontHeight = gm.gmBlackBoxY;
 	if(FAILED(this->device->CreateTexture(fontWidth, fontHeight, 1, 0, D3DFMT_A8R8G8B8, D3DPOOL_MANAGED, &pTex, NULL))){
 		OutputDebugString("×テクスチャの生成に失敗しました。\n");
+		delete[] pMono;
 		return;
 	}
 
@@ -150,6 +151,7 @@ void Font::CreateChar(int _x, int _y, wchar_t data[], int _col){
 	this->device->SetFVF(D3DFVF_XYZ | D3DFVF_TEX1);
 	this->device->SetTexture(0, pTex);
 	this->device->DrawPrimitive(D3DPT_TRIANGLESTRIP, 0, 2);
+	pTex->Release();
 }
 
 void Font::DrawString(int _x, int _y, std::string _data, int _col){
@@ -163,6 +165,7 @@ void Font::DrawString(int _x, int _y, std::string _data, int _col){
 	for(unsigned int i=0;i<buf/2;++i){
 		CreateChar(_x+i*this->font_size, _y, &t_data[i], _col);
 	}
+	delete[] t_data;
 }
 
 void Font::Dest(){

@@ -65,6 +65,6 @@ int Key::Process(){
 	return 0;
 }
 
-int Key::GetKeyPush(char _code){
+int Key::GetKeyPush(unsigned char _code){
 	return this->cnt[_code];
 }

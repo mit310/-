@@ -62,6 +62,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Ball.cpp" />
+    <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="Collision.cpp" />
     <ClCompile Include="DirectX.cpp" />
     <ClCompile Include="DX_Model.cpp" />
     <ClCompile Include="Font.cpp" />
@@ -70,9 +73,13 @@
     <ClCompile Include="Input.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Process.cpp" />
+    <ClCompile Include="Title.cpp" />
     <ClCompile Include="Window.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Ball.h" />
+    <ClInclude Include="Camera.h" />
+    <ClInclude Include="Collision.h" />
     <ClInclude Include="DirectX.h" />
     <ClInclude Include="DX_Model.h" />
     <ClInclude Include="Font.h" />
@@ -81,6 +88,7 @@
     <ClInclude Include="Input.h" />
     <ClInclude Include="Process.h" />
     <ClInclude Include="Sys.h" />
+    <ClInclude Include="Title.h" />
     <ClInclude Include="Window.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

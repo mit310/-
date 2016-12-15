@@ -89,6 +89,11 @@ float GetDist(vec m1, vec m2){
 	return fabs((float)sqrtf((m1.x-m2.x)*(m1.x-m2.x) + (m1.y-m2.y)*(m1.y-m2.y) + (m1.z-m2.z)*(m1.z-m2.z)));	//ãóó£
 }
 
+//3DãÛä‘è„ÇÃïΩñ Ç∆ì_ÇÃêÇíºãóó£ÇÇ∆ÇÈ[_face_pos:É|ÉäÉSÉì3í∏ì_]
+float GetDist_Face_Point(const vec *_face_pos, vec _point_pos){
+	vec norm = VNorm(_face_pos);
+	return fabs(VDot(norm, _point_pos-_face_pos[0])) /VSize(norm);
+}
 
 
 //ï∂éöóÒä÷åW
@@ -110,4 +115,40 @@ vec VZero = VGet(0.f, 0.f, 0.f);
 
 vec VGet(float _x, float _y, float _z){
 	return vec(_x, _y, _z);
+}
+
+vec VCross(const vec _pos1, const vec _pos2){
+	vec t;
+	return *D3DXVec3Cross(&t, &_pos1, &_pos2);
+}
+
+float VDot(const vec _pos1, const vec _pos2){
+	return D3DXVec3Dot(&_pos1, &_pos2);
+}
+
+float VSize(const vec _pos){
+	return D3DXVec3Length(&_pos);
+}
+
+vec VUnit(const vec _pos){
+	vec t;
+	return *D3DXVec3Normalize(&t, &_pos);
+}
+
+vec VNorm(const vec *_pos){
+	vec t_vec = VCross(_pos[1]-_pos[0], _pos[2]-_pos[0]);
+	return *D3DXVec3Normalize(&t_vec, &t_vec);
+}
+
+vec ToVec(D3DXMATRIX _mtx){
+	return VGet(_mtx._41, _mtx._42, _mtx._43);
+}
+
+D3DXMATRIX ToMatrix(vec _vector){
+	D3DXMATRIX t_mtx;
+	D3DXMatrixIdentity(&t_mtx);
+	t_mtx._41 = _vector.x;
+	t_mtx._42 = _vector.y;
+	t_mtx._43 = _vector.z;
+	return t_mtx;
 }

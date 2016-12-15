@@ -18,7 +18,7 @@ public:
 	~Key();
 	int Init(HINSTANCE h_instans);	//DIK_ZÅADIK_UPÇ»Ç«
 	int Process();
-	int GetKeyPush(char _code);
+	int GetKeyPush(unsigned char _code);
 
 
 	void Dest();

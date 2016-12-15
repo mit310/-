@@ -1,6 +1,7 @@
 #pragma once
 #include <sstream>
 #include <iomanip>
+#include <d3dx9.h>
 
 #define _USE_MATH_DEFINES
 #include <math.h>
@@ -25,9 +26,19 @@ void SplitColor(int code, int *r, int *g, int *b);
 bool GetCol_Sphere(vec m1, float r1, vec m2, float r2);
 float GetDist(vec m1, vec m2);
 
-//DxLib拡張
+//ベクトル拡張
 extern vec VZero;
+extern vec VNorm(const vec *_pos);	//面法線
+extern vec VUnit(const vec _pos);	//正規化
 extern vec VGet(float _x, float _y, float _z);
+extern vec VCross(const vec _pos1, const vec _pos2);
+extern float VDot(const vec _pos1, const vec _pos2);
+extern float VSize(const vec _pos);	//ベクトルを大きさにする
+extern float GetDist_Face_Point(const vec *_face_pos, vec _point_pos);
+
+extern vec ToVec(D3DXMATRIX _mtx);
+D3DXMATRIX ToMatrix(vec _vector);
+
 
 //安全なベクター配列のコピー
 template <class T> typename void Copy(std::vector<T> src, std::vector<T> *dest){
